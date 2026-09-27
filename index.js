@@ -98,7 +98,7 @@ class App {
     this.setStatus('updating');
     try {
       await this.exec('git pull');
-      await this.exec('npm i');
+      await this.exec('npm i --color=always');
     } catch (err) {
       this.log('system', `update failed: ${err.message}`);
       throw err;
