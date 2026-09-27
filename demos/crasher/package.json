@@ -1,5 +1,5 @@
 {
-  "name": "demo-flaky",
+  "name": "crasher",
   "scripts": {
     "start": "node index.js"
   }

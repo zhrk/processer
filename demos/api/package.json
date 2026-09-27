@@ -1,5 +1,5 @@
 {
-  "name": "demo-worker",
+  "name": "api",
   "scripts": {
     "start": "node index.js"
   }
