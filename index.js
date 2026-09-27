@@ -6,6 +6,8 @@ import express from 'express';
 import cors from 'cors';
 import treeKill from 'tree-kill';
 
+process.env.FORCE_COLOR = '1';
+
 const config = { restartDelay: 2000, ...JSON.parse(readFileSync(new URL('./config.json', import.meta.url))) };
 const events = new EventEmitter();
 
