@@ -1,0 +1,6 @@
+{
+  "name": "demo-flaky",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
