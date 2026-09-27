@@ -6,8 +6,6 @@ import express from 'express';
 import cors from 'cors';
 import treeKill from 'tree-kill';
 
-process.env.FORCE_COLOR = '1';
-
 const config = { restartDelay: 2000, ...JSON.parse(readFileSync(new URL('./config.json', import.meta.url))) };
 const events = new EventEmitter();
 
@@ -97,7 +95,7 @@ class App {
   async update() {
     this.setStatus('updating');
     try {
-      await this.exec('git pull');
+      await this.exec('git -c color.ui=always pull');
       await this.exec('npm i --color=always');
     } catch (err) {
       this.log('system', `update failed: ${err.message}`);
